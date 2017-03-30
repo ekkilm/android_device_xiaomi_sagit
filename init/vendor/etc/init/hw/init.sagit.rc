@@ -21,7 +21,7 @@ on post-fs-data
     mkdir /data/misc/fpc 0770 system system
     mkdir /data/misc/goodix 0770 system system
     mkdir /persist/fpc 0770 system system
-    mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
     mkdir /data/thermal 0771 system system
     mkdir /data/thermal/config 0771 system system
     chown system system /dev/sysmatdrv
