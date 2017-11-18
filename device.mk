@@ -61,14 +61,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+# Prebuilt stuff
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,device/xiaomi/sagit/prebuilt/system,system)
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -114,9 +113,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
-# Camera
+# Charging Mode
 PRODUCT_PACKAGES += \
-    Snap
+    charger_res_images
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -133,9 +132,9 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtinyxml
 
-# Doze
+# Extras
 PRODUCT_PACKAGES += \
-    XiaomiDoze
+    TsExtra
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
@@ -203,6 +202,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
+# Miui Camera
+PRODUCT_PACKAGES += \
+     MiuiCamera
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -237,6 +240,10 @@ PRODUCT_PACKAGES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson
+
+# QPerformance
+    PRODUCT_BOOT_JARS += \
+    QPerformance
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -275,13 +282,13 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
-# SdcardFS
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sys.sdcardfs=1
-
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.msm8998
+
+# TS
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.ts.build=ts-aospa7
 
 # Wifi
 PRODUCT_PACKAGES += \

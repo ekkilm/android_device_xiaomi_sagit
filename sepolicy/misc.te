@@ -1,0 +1,35 @@
+#============= fingerprintd ==============
+allow fingerprintd persist_file:dir search;
+allow fingerprintd fpc_persist_file:dir search;
+allow fingerprintd persist_misc_file:dir search;
+allow fingerprintd persist_misc_file:file read;
+allow fingerprintd persist_misc_file:file open;
+
+#============= init ==============
+allow init bt_firmware_file:dir create;
+allow init firmware_file:dir create;
+allow init bt_firmware_file:dir setattr;
+allow init firmware_file:dir setattr;
+
+#============= priv_app ==============
+allow priv_app device:dir read;
+allow priv_app device:dir open;
+
+#============= radio ==============
+allow radio system_app_data_file:dir getattr;
+
+#============= rild ==============
+allow rild tombstone_data_file:dir write;
+allow rild tombstone_data_file:dir add_name;
+allow rild tombstone_data_file:file create;
+
+#============= system_server ==============
+allow system_server user_profile_data_file:dir write;
+
+#============= thermal-engine ==============
+allow thermal-engine socket_device:sock_file create;
+allow thermal-engine socket_device:sock_file setattr;
+
+#============= vold ==============
+allow vold persist_file:dir read;
+allow vold persist_file:dir open;

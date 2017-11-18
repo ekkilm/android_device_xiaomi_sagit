@@ -461,9 +461,7 @@ vendor/lib/libchromatix_s5k3m3_semco_zsl_preview_ad5816g.so
 vendor/lib/libchromatix_s5k3m3_semco_zsl_video_ad5816g.so
 
 # Camera configs
-etc/camera/camera_config.xml
 etc/camera/imx386_semco_chromatix.xml
-etc/camera/s5k3m3_semco_chromatix.xml
 etc/camera/imx268_chromatix.xml
 etc/camera/sagit_imx268_liteon_chromatix.xml
 
@@ -497,6 +495,63 @@ etc/firmware/cpp_firmware_v1_5_0.fw
 etc/firmware/cpp_firmware_v1_5_2.fw
 etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
+
+# Camera Miui
+etc/dualcamera.png
+etc/watermark_font_2300_3199.dat
+etc/MIUI_Time.ttf
+etc/face_goodly_208_180
+etc/face_ravishing_238_224
+etc/age_gender_bg
+etc/people_gender.dat
+etc/face_splendid_274_200
+etc/android_model_facea.dat
+etc/lf_facerank_model.bin
+etc/android_model_faceg.dat
+
+etc/camera/s5k3m3_semco_chromatix.xml
+etc/camera/sagit_imx268_liteon_chromatix.xml
+etc/camera/imx268_chromatix.xml
+etc/camera/imx386_semco_chromatix.xml
+etc/camera/camera_config.xml
+
+lib64/libmorpho_panorama.so
+lib64/libmorpho_memory_allocator.so
+lib64/libmorpho_groupshot.so
+lib64/libCameraEffectJNI.so
+
+lib/libmorpho_panorama.so
+lib/libmorpho_memory_allocator.so
+lib/libmorpho_groupshot.so
+lib/libCameraEffectJNI.so
+
+vendor/lib64/libjni_ubifocus.so
+vendor/lib64/libjni_clearsight.so
+vendor/lib64/libseemore.so
+vendor/lib64/libjni_chromaflash.so
+vendor/lib64/libjni_stillmore.so
+vendor/lib64/libjni_sharpshooter.so
+vendor/lib64/libchromaflash.so
+vendor/lib64/libjni_makeupV2.so
+vendor/lib64/libjni_blurbuster.so
+vendor/lib64/libmorpho_panorama_gp.so
+vendor/lib64/liboptizoom.so
+vendor/lib64/libblurbuster.so
+vendor/lib64/libjni_optizoom.so
+vendor/lib64/libmorpho_group_portrait.so
+
+vendor/lib/libdualcameraddm.so
+vendor/lib/libjni_ubifocus.so
+vendor/lib/libjni_filtergenerator.so
+vendor/lib/libjni_chromaflash.so
+vendor/lib/libjni_stillmore.so
+vendor/lib/libjni_sharpshooter.so
+vendor/lib/libjni_dualcamera.so
+vendor/lib/libjni_makeupV2.so
+vendor/lib/libjni_blurbuster.so
+vendor/lib/libfiltergenerator.so
+vendor/lib/libblurbuster.so
+vendor/lib/libjni_optizoom.so
 
 # Camera sensors
 vendor/lib/libmmcamera_isp_aec_bg_stats47.so
@@ -591,9 +646,9 @@ etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpmapi.jar
-framework/tcmclient.jar
+-framework/com.qti.dpmframework.jar
+-framework/dpmapi.jar
+-framework/tcmclient.jar
 -priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/lib64/libdpmctmgr.so
 vendor/lib64/libdpmfdmgr.so
@@ -647,13 +702,12 @@ etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
 etc/cacert_location.pem
 etc/xtra_root_cert.pem
-framework/com.qti.location.sdk.jar
+-framework/com.qti.location.sdk.jar
 framework/com.qualcomm.location.vzw_library.jar
 framework/izat.xt.srv.jar
 -lib64/libloc_api_v02.so
 lib64/libloc_ds_api.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
-vendor/bin/slim_daemon
 vendor/lib64/hw/flp.default.so
 vendor/lib64/libalarmservice_jni.so
 vendor/lib64/libdataitems.so
@@ -832,6 +886,7 @@ vendor/lib/libOmxVideoDSMode.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvqzip.so
+vendor/lib/mediadrm/libwvdrmengine.so
 
 # Network
 -priv-app/QtiTetherService/QtiTetherService.apk
@@ -846,6 +901,7 @@ vendor/lib/libcsm_data.so
 vendor/firmware/libpn553_fw.so
 
 # Perf
+-framework/QPerformance.jar
 bin/energy-awareness
 bin/iop
 vendor/bin/perfd
@@ -872,6 +928,9 @@ bin/pm-proxy
 bin/pm-service
 vendor/lib64/libperipheral_client.so
 vendor/lib/libperipheral_client.so
+
+# Powerhint
+etc/powerhint.xml
 
 # Postprocessing
 etc/permissions/com.qti.snapdragon.sdk.display.xml

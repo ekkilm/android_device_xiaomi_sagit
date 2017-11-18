@@ -52,6 +52,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8998
 TARGET_KERNEL_CONFIG := sagit_user_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_APPEND_DTB := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
@@ -120,7 +121,7 @@ DTS_CODEC_M_ := false
 
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 
-USE_CUSTOM_AUDIO_POLICY := 1
+#USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
@@ -138,11 +139,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# CM Hardware
-BOARD_HARDWARE_CLASS += \
-    hardware/cyanogen/cmhw \
-    $(DEVICE_PATH)/cmhw
-BOARD_USES_CYANOGEN_HARDWARE := true
+# D2TW
 TARGET_TAP_TO_WAKE_NODE :=  "/proc/touchpanel/double_tap_enable"
 
 # CNE and DPM
@@ -222,7 +219,7 @@ PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/Android.mk
 
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
