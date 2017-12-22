@@ -32,9 +32,9 @@ volume index from 0 to 100.
     </reference>
     <reference name="DEFAULT_VOICE_VOLUME_CURVE">
     <!-- Default Voice reference Volume Curve -->
-        <point>0,-2400</point>
-        <point>33,-1600</point>
-        <point>66,-800</point>
+        <point>1,-8600</point>
+        <point>33,-3700</point>
+        <point>66,-2300</point>
         <point>100,0</point>
     </reference>
     <reference name="HEADSET_SYSTEM_VOLUME_CURVE">
@@ -119,7 +119,7 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_BLUETOOTH_SCO" deviceCategory="DEVICE_CATEGORY_HEADSET"
                                              ref="HEADSET_VOICE_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_BLUETOOTH_SCO" deviceCategory="DEVICE_CATEGORY_SPEAKER"
-                                             ref="DEFAULT_VOICE_VOLUME_CURVE"/>
+                                             ref="DEFAULT_MEDIA_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_BLUETOOTH_SCO" deviceCategory="DEVICE_CATEGORY_EARPIECE"
                                              ref="DEFAULT_VOICE_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_BLUETOOTH_SCO" deviceCategory="DEVICE_CATEGORY_EXT_MEDIA"
