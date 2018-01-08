@@ -16,3 +16,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="sagit" \
     BUILD_FINGERPRINT="Xiaomi/sagit/sagit:8.0.0/OPR1.170623.027/V9.2.3.0.OCAMIEK:user/release-keys" \
     PRIVATE_BUILD_DESC="sagit-user 8.0.0 OPR1.170623.027 V9.2.3.0.OCAMIEK release-keys"
+
+WITH_MUSICFX := true
