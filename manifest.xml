@@ -5,7 +5,7 @@
         <version>2.0</version>
         <interface>
             <name>IDevicesFactory</name>
-            <instance>msm8998</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -37,7 +37,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.broadcastradio</name>
-        <transport>hwbinder</transport>
+        <transport arch="32+64">passthrough</transport>
         <version>1.0</version>
         <interface>
             <name>IBroadcastRadioFactory</name>
@@ -92,7 +92,7 @@
         <version>1.0</version>
         <interface>
             <name>IGatekeeper</name>
-            <instance>msm8998</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -101,7 +101,7 @@
         <version>1.0</version>
         <interface>
             <name>IGnss</name>
-            <instance>msm8998</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -110,7 +110,7 @@
         <version>2.0</version>
         <interface>
             <name>IAllocator</name>
-            <instance>msm8998</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -128,7 +128,7 @@
         <version>2.1</version>
         <interface>
             <name>IComposer</name>
-            <instance>msm8998</instance>
+            <instance>default</instance>
         </interface>
     </hal>
    <hal format="hidl">
@@ -146,7 +146,7 @@
         <version>3.0</version>
         <interface>
             <name>IKeymasterDevice</name>
-            <instance>msm8998</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -155,7 +155,7 @@
         <version>2.0</version>
         <interface>
             <name>ILight</name>
-            <instance>msm8998</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -177,7 +177,7 @@
         <version>1.0</version>
         <interface>
             <name>IMemtrack</name>
-            <instance>msm8998</instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -189,7 +189,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-<!--
     <hal format="hidl">
         <name>android.hardware.power</name>
         <transport>hwbinder</transport>
@@ -199,7 +198,6 @@
             <instance>default</instance>
         </interface>
     </hal>
--->
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
@@ -236,7 +234,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
-        <transport>hwbinder</transport>
+        <transport arch="32+64">passthrough</transport>
         <version>1.0</version>
         <interface>
             <name>ISensors</name>
