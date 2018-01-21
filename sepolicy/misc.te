@@ -10,6 +10,10 @@ allow init bt_firmware_file:dir create;
 allow init firmware_file:dir create;
 allow init bt_firmware_file:dir setattr;
 allow init firmware_file:dir setattr;
+allow init proc:lnk_file setattr;
+
+#============= netmgrd ==============
+allow netmgrd netmgr_data_file:dir search;
 
 #============= priv_app ==============
 allow priv_app device:dir read;
