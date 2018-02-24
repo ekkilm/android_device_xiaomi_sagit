@@ -134,7 +134,7 @@ vendor/lib/libmmcamera2_mct_shimlayer.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so|56047b0ebd04699ac9202b50a3db88571b910dd4
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_lib.so
 vendor/lib/libmmcamera2_stats_modules.so
@@ -446,11 +446,11 @@ vendor/lib/libchromatix_s5k3m3_semco_zsl_preview_ad5816g.so
 vendor/lib/libchromatix_s5k3m3_semco_zsl_video_ad5816g.so
 
 # Camera configs
-etc/camera/camera_config.xml
-etc/camera/imx386_semco_chromatix.xml
-etc/camera/s5k3m3_semco_chromatix.xml
-etc/camera/imx268_chromatix.xml
-etc/camera/sagit_imx268_liteon_chromatix.xml
+etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml
+etc/camera/imx386_semco_chromatix.xml:vendor/etc/camera/imx386_semco_chromatix.xml
+etc/camera/s5k3m3_semco_chromatix.xml:vendor/etc/camera/s5k3m3_semco_chromatix.xml
+etc/camera/imx268_chromatix.xml:vendor/etc/camera/imx268_chromatix.xml
+etc/camera/sagit_imx268_liteon_chromatix.xml:vendor/etc/camera/sagit_imx268_liteon_chromatix.xml
 
 # Camera eeproms
 vendor/lib/libSonyIMX386PdafLibrary.so
