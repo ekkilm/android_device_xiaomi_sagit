@@ -43,7 +43,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc1b0000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc1b0000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -52,6 +52,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8998
 TARGET_KERNEL_CONFIG := sagit_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_APPEND_DTB := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
@@ -112,6 +113,8 @@ AUDIO_FEATURE_ENABLED_DEV_ARBI := false
 AUDIO_FEATURE_ENABLED_SOURCE_TRACKING := true
 AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
 AUDIO_FEATURE_ENABLED_RAS := true
+AUDIO_FEATURE_ENABLED_SND_MONITOR := true
+AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
 
 MM_AUDIO_ENABLED_SAFX := true
 MM_AUDIO_ENABLED_FTM := true
@@ -143,8 +146,8 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_USES_QCNE := true
 
 # Enable dexpreopt to speed boot time
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+#WITH_DEXPREOPT := true
+#WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 
 # Display
 MAX_VIRTUAL_DISPLAY_DIMENSION := 4096
@@ -199,7 +202,6 @@ BOARD_NFC_HAL_SUFFIX := msm8998
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-#BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5368709120
@@ -210,6 +212,8 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
+TARGET_POWERHAL_VARIANT := qcom
+
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_USES_INTERACTION_BOOST := true
 
@@ -231,8 +235,8 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 PROTOBUF_SUPPORTED := true
 TARGET_RIL_VARIANT := caf
 
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
+# Selinux
+include device/qcom/sepolicy/Android.mk
 
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 

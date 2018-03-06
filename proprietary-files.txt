@@ -108,7 +108,7 @@ vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libarcsoft_beautyshot_video_algorithm.so
 vendor/lib/libchromaflash.so
 vendor/lib/libFaceGrade.so
-vendor/lib/libFaceProc.so
+#vendor/lib/libFaceProc.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
@@ -189,7 +189,7 @@ vendor/lib/liboptizoom.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
-vendor/lib/libRecoFace.so
+#vendor/lib/libRecoFace.so
 vendor/lib/libseemore.so
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
 vendor/lib/libubifocus.so
@@ -594,10 +594,10 @@ etc/dpm/nsrm/NsrmConfiguration.xml
 etc/init/dpmd.rc
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-framework/com.qti.dpmframework.jar
-framework/dpm.jar
-framework/dpmapi.jar
-framework/tcmclient.jar
+-framework/com.qti.dpmframework.jar
+#-framework/dpm.jar
+-framework/dpmapi.jar
+-framework/tcmclient.jar
 -priv-app/dpmserviceapp/dpmserviceapp.apk
 lib/com.qualcomm.qti.dpm.api@1.0.so
 lib/libdiag_system.so
@@ -699,7 +699,7 @@ etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
 etc/permissions/privapp-permissions-com.qualcomm.location.xml
-framework/com.qti.location.sdk.jar
+-framework/com.qti.location.sdk.jar
 framework/izat.xt.srv.jar
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/loc_launcher
